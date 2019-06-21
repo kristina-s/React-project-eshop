@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+.Card{
+  display: inline;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 5px;
+}

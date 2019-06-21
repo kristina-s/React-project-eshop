@@ -1,0 +1,17 @@
+.Card{
+    width: 20em;
+    height: 420px;
+    color: rgb(108, 0, 155);
+    
+}
+.CardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid darkslategray;
+    padding: 5px;
+    margin: 5px;
+}
+img{
+    width: 200px;
+    height: 250px;
+}
