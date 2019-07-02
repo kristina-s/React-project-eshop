@@ -1,0 +1,40 @@
+.Table {
+    margin: 50px auto;
+    width: 75%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+
+td,
+th {
+    text-align: center;
+    border-left: 1px solid #cbcbcb;
+    border-width: 0 0 1px 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: 0.5em 1em; 
+    border-bottom: 1px solid #cbcbcb;
+}
+
+thead {
+    background-color: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+.Table tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+.Total{
+    border: 1px solid #cbcbcb;
+    height: 30px;
+}
+span{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+    color: rgb(85, 82, 82);
+}

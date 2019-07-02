@@ -1,0 +1,14 @@
+.Products{
+    border: 8px solid black;
+}
+#sort-menu, #sort-menu option{
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color: #fff;
+    color: rgb(85, 82, 82);
+    box-shadow: 5px 10px 8px #888888;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid darkgray;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import Logo from '../../../../assets/logo.jpg'
+// import Logo from '../../../../assets/logo.jpg'
 
-const brandName = () => (
-    <div className="Nav-bar">
-        <img src={Logo} alt="" />
-        <p>Bonsai</p>
+const brandName = (props) => (
+    <div className="Nav-bar Brand" onClick={props.clickLogo}>
+        {/* <img src={Logo} alt="" /> */}
+        <p>home</p>
     </div>
     
 )

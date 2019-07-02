@@ -14,7 +14,14 @@ class Flower
 		this.images = images;
 	}	
 }
-
+class CartItem
+{
+constructor(quantity, item)
+    {
+        this.quantity = quantity;
+        this.item = item;
+    }
+}
 const config = {
     baseUrl : "https://raw.githubusercontent.com/kristina-s/Frontend-project-resourses/master/json/",   
 }
@@ -25,7 +32,7 @@ const typeOfSort = {
     PriceDesc : 'price-desc'
 }
 const services = {
-    getData: async function(type){
+    getData: async (type) => {
         const url = `${config.baseUrl}${type}.json`;
         const response = await fetch(url);
         const result = await response.json();
@@ -34,7 +41,7 @@ const services = {
         );
 		return flowers;
 	},
-	SortData : function (array, target) {
+	sortData : (array, target) => {
         switch (target) {
             case typeOfSort.NameAsc:
                 array.sort((f, s) => f.name.localeCompare(s.name));
@@ -50,6 +57,20 @@ const services = {
                 return array;
             default:
                 break;
+        }
+    },
+    mapIntoCartObjects : (array) => {
+        return array.map(x => new CartItem (1, x))
+    },
+
+    checkIsInCart : (array, itemToAdd) => {
+        let foundItem = array
+            .filter(x => x.item.name === itemToAdd.name);
+        if(foundItem.length !== 0){
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }

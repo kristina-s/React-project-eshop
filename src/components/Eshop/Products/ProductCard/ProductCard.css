@@ -1,7 +1,9 @@
 .Card{
     width: 20em;
     height: 420px;
-    color: rgb(108, 0, 155);
+    color: rgb(85, 82, 82);
+    box-shadow: 5px 10px 8px #888888;
+    margin: 15px;
     
 }
 .CardContainer{
@@ -10,8 +12,13 @@
     border: 3px solid darkslategray;
     padding: 5px;
     margin: 5px;
+    justify-content: center;
 }
 img{
     width: 200px;
     height: 250px;
+}
+.Card button{
+    border-radius: 15%;
+    padding: 5px;
 }

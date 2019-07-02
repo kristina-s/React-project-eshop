@@ -4,10 +4,54 @@
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-    
+    font-size: 32px;
+    color: rgb(85, 82, 82);
+    font-family: 'Indie Flower', cursive;
 }
 .Nav-bar img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
+    margin-top: 25px;
+}
+.Brand{
+    border: 0px solid #ccc;
+    border-radius: 20%;
+    padding: 7px;
+    cursor: pointer;
+
+}
+.Select{
+    vertical-align: baseline;
+        padding: 15px;
+
+}
+.Select select{
+    margin: 5px; 
+}
+
+#menu, #menu option{
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    background-color: #fff;
+    color: rgb(85, 82, 82);
+    box-shadow: 5px 10px 8px #888888;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid darkgray;
+    font-family: 'Indie Flower', cursive;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+#menu option:hover{
+    background-color: darkorchid;
+    color: white;
+}
+.Paragraph{
+    font-family: 'Indie Flower', cursive;
+    font-size: 32px;
+    color: rgb(85, 82, 82);
+
 }

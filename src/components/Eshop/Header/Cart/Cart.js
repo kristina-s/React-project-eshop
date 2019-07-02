@@ -1,12 +1,11 @@
 import React from 'react';
-import Cart from '../../../../assets/cart.svg'
+import Cart from '../../../../assets/cart-02.png'
 
-const cart = () => (
-    <div className="Nav-bar">
-        <img src={Cart} alt="" />
-        <p>0</p>
+const cart = (props) => (
+    <div className="Nav-bar Brand">
+        <img src={Cart} alt="" onClick={props.clickCart} />
+        <p>{props.itemsNumber}</p>
     </div>
-    
 )
 
 export default cart;

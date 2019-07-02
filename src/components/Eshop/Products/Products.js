@@ -1,11 +1,12 @@
 import React from 'react';
 import ProductCard from './ProductCard/ProductCard';
-import './ProductCard/ProductCard.css'
+import './ProductCard/ProductCard.css';
+import './Products.css';
+
 
 const products = (props) => (
-    <div className="CardContainer">
-        <p>Sort items by:</p>
-        <select name="dropdown" id="sorter" onChange={props.changeItem}>
+    <div className="CardContainer Select">
+        <select name="dropdown" id="sort-menu" onChange={props.changeItem}>
                 <option>--Select sorting--</option>  
                 <option 
                     value="price-asc"

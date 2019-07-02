@@ -1,0 +1,29 @@
+.ImageLeft, .ImageRight{
+    width: auto;
+    height: 310px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    font-size: 32px;
+    color: rgb(85, 82, 82);
+    font-family: 'Indie Flower', cursive;
+}
+.ImageLeft img{
+    float: left;
+    width: 50%;
+    height: 320px;  
+    box-shadow: 5px 10px 8px #888888;
+
+}
+.ImageRight img{
+    float: right;
+    width: 50%;
+    height: 320px;  
+    box-shadow: 5px 10px 8px #888888;
+
+}
+.ImageLeft p, .ImageRight p{
+    padding-top: 70px;
+    font-size: 1.3em;
+    padding-left: 15px;
+    padding-right: 15px;
+}
