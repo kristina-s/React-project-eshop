@@ -7,7 +7,7 @@ import './Header.css';
 const header = (props) => {
     return (
         <div>
-            <h3 className='Paragraph'>welocme to my awesome online flower-shop</h3>
+            <h3 className='Paragraph'>welocme to my online flower-shop</h3>
             <div className='Nav-bar'>
                 <BrandName clickLogo={props.clickLogo}/>
                 <Navigation clickItem={props.clickItem}/>
@@ -15,7 +15,7 @@ const header = (props) => {
                     clickCart={props.clickCart}
                     itemsNumber={props.itemsNumber}/>
             </div>
-            
+        
         </div>
         
     )

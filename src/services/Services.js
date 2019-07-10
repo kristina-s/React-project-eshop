@@ -1,3 +1,10 @@
+import sun1 from '../assets/small-images/sun-01.png';
+import sun2 from '../assets/small-images/sun-02.png';
+import sun3 from '../assets/small-images/sun-03.png';
+import bu1 from '../assets/small-images/bucket-01.png';
+import bu2 from '../assets/small-images/bucket-02.png';
+import bu3 from '../assets/small-images/bucket-03.png';
+
 class Flower
 {
 	constructor(id, name, latinName, titleImage, humidity, light, description, bloomTime, price, images)
@@ -31,13 +38,23 @@ const typeOfSort = {
     PriceAsc : 'price-asc',
     PriceDesc : 'price-desc'
 }
+let typeOfLight = {
+    sunHigh: 'sunlight',
+    sunMedium: 'half-shadow',
+    sunLow: 'shadow'
+}
+let typeOfHumidity = {
+    humidityHigh: 'high',
+    humidityMedium: 'medium',
+    humidityLow: 'low'
+}
 const services = {
     getData: async (type) => {
         const url = `${config.baseUrl}${type}.json`;
         const response = await fetch(url);
         const result = await response.json();
         const flowers = result.map(flower => 
-            new Flower (flower.id, flower.name, flower.latinName, flower.titleImage, flower.humidity, flower.light, flower.description, flower.bloomTime, flower.price, flower.images) 
+            new Flower (flower.id, flower.name, flower.latinName, flower.titleImage, setBucketIcon(flower.humidity), setSunIcon(flower.light), flower.description, flower.bloomTime, flower.price, flower.images) 
         );
 		return flowers;
 	},
@@ -72,9 +89,61 @@ const services = {
         else{
             return false;
         }
+    },
+
+//    setSunIcon : (type) => {
+//         switch(type){
+//             case typeOfLight.sunHigh:
+//                 return sun1;
+//             case typeOfLight.sunMedium:
+//                 return sun2;
+//             case typeOfLight.sunLow:
+//                 return sun3; 
+//             default:
+//                 break;
+//         }
+//     },
+//     setBucketIcon : (type) => {
+//         switch(type){
+//             case typeOfHumidity.humidityHigh:
+//                 return bu1;
+//             case typeOfHumidity.humidityMedium:
+//                 return bu2;
+//             case typeOfHumidity.humidityLow:
+//                 return bu3;   
+//             default:
+//                 break;   
+//         }
+//     }
+}
+
+const setSunIcon = (type) => {
+    switch(type){
+        case typeOfLight.sunHigh:
+            return sun1;
+        case typeOfLight.sunMedium:
+            return sun2;
+        case typeOfLight.sunLow:
+            return sun3; 
+        default:
+            break;
+    }
+}
+const setBucketIcon = (type) => {
+    switch(type){
+        case typeOfHumidity.humidityHigh:
+            return bu1;
+        case typeOfHumidity.humidityMedium:
+            return bu2;
+        case typeOfHumidity.humidityLow:
+            return bu3;   
+        default:
+            break;   
     }
 }
 
-
-
 export default services;
+
+
+
+

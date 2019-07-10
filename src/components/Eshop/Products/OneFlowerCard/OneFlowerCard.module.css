@@ -1,0 +1,32 @@
+.OneCard{
+    background-color: rgb(253, 250, 250);
+    color: rgb(85, 82, 82);
+    border: 1px solid darkgrey;
+    box-shadow: 5px 10px 8px #888888;
+    position: fixed;
+    top: 12%;
+    left: 20%;
+    z-index: 8888;
+    width: 60%;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.Back{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 50px;
+    height: 40px;
+    color:  white;
+    background-color: rgba(153, 50, 204, 0.664);
+}
+.Parts{
+    width: 35%;
+}
+.SmallImage{
+    width: 50px;
+    height: 50px;
+}

@@ -12,7 +12,6 @@
     width: 50%;
     height: 320px;  
     box-shadow: 5px 10px 8px #888888;
-
 }
 .ImageRight img{
     float: right;
@@ -26,4 +25,16 @@
     font-size: 1.3em;
     padding-left: 15px;
     padding-right: 15px;
+}
+.ButtonLk{
+    border: none;
+    color: rgb(85, 82, 82);
+    cursor: pointer;
+    font-size: 0.8em;
+    font-family: 'Indie Flower', cursive;
+    border-radius: 50%;
+}
+.ButtonLk:hover{
+    background-color: rgba(153, 50, 204, 0.664);
+    color:white;
 }

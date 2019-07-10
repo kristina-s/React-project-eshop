@@ -28,6 +28,7 @@
 }
 .Select select{
     margin: 5px; 
+    font-family: 'Indie Flower', cursive;
 }
 
 #menu, #menu option{
@@ -45,13 +46,20 @@
     cursor: pointer;
 
 }
-#menu option:hover{
-    background-color: darkorchid;
+#menu:hover, option:hover{
+    background-color: rgba(153, 50, 204, 0.664);
     color: white;
 }
 .Paragraph{
     font-family: 'Indie Flower', cursive;
     font-size: 32px;
     color: rgb(85, 82, 82);
+    text-shadow: 5px 10px 8px rgba(153, 50, 204, 0.664);
 
+}
+.Footer{
+    height: 40px;
+    background-color: rgba(153, 50, 204, 0.664);
+    color: white;
+    padding-top: 20px;
 }

@@ -32,6 +32,7 @@ const products = (props) => (
             description = {flower.description}
             price = {flower.price}
             add = {props.addToCart}
+            showOne={props.showOneFlower}
             />
         ))}
         </div>

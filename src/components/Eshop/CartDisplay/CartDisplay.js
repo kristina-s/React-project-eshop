@@ -15,6 +15,7 @@ const cartDisplay = (props) => {
                 <th>Quantity</th>
                 <th>Price (per item)</th>
                 <th>Price (total)</th>
+                <th></th>
                 </tr>
                 
             </thead>
@@ -27,6 +28,7 @@ const cartDisplay = (props) => {
             quantity={x.quantity}
             priceEach={x.item.price}
             totalPerProduct={x.quantity * x.item.price}
+            delete={props.deleteItem}
         />)
         )}
    </tbody>
