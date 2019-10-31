@@ -11,9 +11,13 @@ const header = (props) => {
             <div className='Nav-bar'>
                 <BrandName clickLogo={props.clickLogo}/>
                 <Navigation clickItem={props.clickItem}/>
-                <Cart 
-                    clickCart={props.clickCart}
-                    itemsNumber={props.itemsNumber}/>
+                <div className="name-cart">
+                    <p className="login-message"> Hello {props.name} </p>
+                    <Cart 
+                        clickCart={props.clickCart}
+                        itemsNumber={props.itemsNumber}/>
+                </div>
+                
             </div>
         
         </div>

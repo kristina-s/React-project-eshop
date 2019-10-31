@@ -18,7 +18,6 @@ class Flower
 		this.humidity = humidity;
 		this.light = light;
 		this.price = price;
-		this.images = images;
 	}	
 }
 class CartItem
@@ -30,7 +29,7 @@ constructor(quantity, item)
     }
 }
 const config = {
-    baseUrl : "https://raw.githubusercontent.com/kristina-s/Frontend-project-resourses/master/json/",   
+    baseUrl : "http://localhost:63889/api/flowers/",   
 }
 const typeOfSort = {
     NameAsc : 'name-asc',
@@ -49,12 +48,16 @@ let typeOfHumidity = {
     humidityLow: 'low'
 }
 const services = {
-    getData: async (type) => {
-        const url = `${config.baseUrl}${type}.json`;
-        const response = await fetch(url);
+    getData: async (type, token) => {
+        const url = `${config.baseUrl}${type}`;
+        const response = await fetch(url, {method:'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`
+        },
+        });
         const result = await response.json();
         const flowers = result.map(flower => 
-            new Flower (flower.id, flower.name, flower.latinName, flower.titleImage, setBucketIcon(flower.humidity), setSunIcon(flower.light), flower.description, flower.bloomTime, flower.price, flower.images) 
+            new Flower (flower.id, flower.name, flower.latinName, flower.titleImage, setBucketIcon(flower.humidity), setSunIcon(flower.light), flower.description, flower.bloomTime, flower.price) 
         );
 		return flowers;
 	},
@@ -91,30 +94,6 @@ const services = {
         }
     },
 
-//    setSunIcon : (type) => {
-//         switch(type){
-//             case typeOfLight.sunHigh:
-//                 return sun1;
-//             case typeOfLight.sunMedium:
-//                 return sun2;
-//             case typeOfLight.sunLow:
-//                 return sun3; 
-//             default:
-//                 break;
-//         }
-//     },
-//     setBucketIcon : (type) => {
-//         switch(type){
-//             case typeOfHumidity.humidityHigh:
-//                 return bu1;
-//             case typeOfHumidity.humidityMedium:
-//                 return bu2;
-//             case typeOfHumidity.humidityLow:
-//                 return bu3;   
-//             default:
-//                 break;   
-//         }
-//     }
 }
 
 const setSunIcon = (type) => {

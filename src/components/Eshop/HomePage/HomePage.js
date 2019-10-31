@@ -9,20 +9,28 @@ import Pic03 from '../../../assets/flower-01.jpg';
 
 const homePage = (props) => (
     <div>
+        
+        <div>
+            
+        </div>
+
+        <div>
         <HomePageItemLeft 
             image={Pic01}
             text="This is our carefully selected collection of potted flowers" 
-            eventValue="pot-flower"
+            eventValue="Potted"
             clickItem={props.clickItem}/>
         <HomePageItemRight 
             image={Pic02}
             text="Our vase flowers are grown with love and care"
-            eventValue="branch-flower"
+            eventValue="Branch"
             clickItem={props.clickItem} />
         <HomePageItemLeft 
             image={Pic03}
             text="The production process is precise but rewarding at the end"
             />
+        </div>
+        
 
     </div>
 )

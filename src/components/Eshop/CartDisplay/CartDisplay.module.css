@@ -40,3 +40,17 @@ span{
     margin: 10px;
     color: rgb(85, 82, 82);
 }
+
+.order-form {
+    margin: 50px;
+}
+.orderButton {
+    border: none;
+    text-decoration: underline;
+    margin: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(129, 15, 139, 0.664);
+    color: rgb(244, 232, 247);
+    border-radius: 15%;
+}

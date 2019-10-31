@@ -8,10 +8,10 @@ const navigation = (props) => {
                 <select name="dropdown" id="menu" onChange={props.clickItem}>
                 <option value="" hidden>---   Choose Flower Type  ---</option>
                     <option 
-                        value="pot-flower"
+                        value="Potted"
                         >Potted Flowers</option>
                     <option 
-                        value="branch-flower"
+                        value="Branch"
                         >Branch Flowers</option>
                 </select>
             

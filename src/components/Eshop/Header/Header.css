@@ -59,7 +59,16 @@
 }
 .Footer{
     height: 40px;
-    background-color: rgba(153, 50, 204, 0.664);
+    background-color: rgba(129, 15, 139, 0.664);
     color: white;
-    padding-top: 20px;
+    padding-top: 10px;
+}
+.name-cart{
+    display: flex;
+    align-items: center;
+}
+.login-message {
+    font-size: 20px;
+    height: 30px;
+    margin: 0 20px;
 }

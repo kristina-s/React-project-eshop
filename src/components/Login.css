@@ -1,0 +1,53 @@
+.login-form {
+    height: 180px;
+    color: black;
+    background-color: rgb(219, 219, 219);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Indie Flower', cursive;
+
+
+    
+}
+.logo-welcome {
+    font-size: 22px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+img {
+    height: 180px;
+}
+
+.forms {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.login-input {
+    height: 30px;
+    margin: 15px;
+}
+.login-button {
+    border: none;
+    font-family: cursive;
+    text-decoration: underline;
+    margin: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(129, 15, 139, 0.664);
+    color: rgb(244, 232, 247);
+    border-radius: 15%;
+}
+button:active{
+    border: 2px solid rgba(100, 11, 85, 0.664);
+}
+
+
+.image {
+    height: 600px;
+    background-image: url('../assets/black-and-white-pictures-of-flowers.jpeg');
+    margin: 0 auto;
+}
