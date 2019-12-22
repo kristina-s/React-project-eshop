@@ -116,7 +116,6 @@ class Eshop extends Component {
     pay = async (fullName, address, city, creditCardNumber) => {
         console.log(fullName, address, city, creditCardNumber);
         const response = await OrderServices.completeOrder(fullName, address, city, creditCardNumber, this.state.loggedUserToken);
-        const data = await response.json();
         this.setState({paymentSuccess:'Order completed successfully!'})
     }
 
